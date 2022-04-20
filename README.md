@@ -1,7 +1,12 @@
 # react-gamepad-tester
 
 My first project made in React, made in order to practice skills.
+
 It relies on [react-gamepads](https://github.com/whoisryosuke/react-gamepads) library, using hook method.
+
+## Live version
+
+Check it out [here](https://nogiszd.github.io/react-gamepad-tester)
 
 ## Usage
 
