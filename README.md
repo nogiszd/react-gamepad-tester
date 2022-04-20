@@ -6,7 +6,7 @@ It relies on [react-gamepads](https://github.com/whoisryosuke/react-gamepads) li
 
 ## Live version
 
-Check it out [here](https://nogiszd.github.io/react-gamepad-tester)
+You can check it out **[here](https://nogiszd.github.io/react-gamepad-tester)**
 
 ## Usage
 
