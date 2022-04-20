@@ -1,4 +1,4 @@
-# react-gamepad-tester
+# react-gamepad-tester ![live demo](https://github.com/nogiszd/react-gamepad-tester/actions/workflows/pages/pages-build-deployment/badge.svg)
 
 My first project made in React, made in order to practice skills.
 
