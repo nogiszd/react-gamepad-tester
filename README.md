@@ -1,4 +1,4 @@
-# react-gamepad-tester ![Made in React](https://badges.aleen42.com/src/react.svg) [![live demo](https://github.com/nogiszd/react-gamepad-tester/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/nogiszd/react-gamepad-tester/actions/workflows/pages/pages-build-deployment)
+# ![Made in React](https://badges.aleen42.com/src/react.svg)[![live demo](https://github.com/nogiszd/react-gamepad-tester/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/nogiszd/react-gamepad-tester/actions/workflows/pages/pages-build-deployment) react-gamepad-tester
 
 My first project made in React, made in order to practice skills.
 
