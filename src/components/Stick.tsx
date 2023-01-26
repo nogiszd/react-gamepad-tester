@@ -1,9 +1,14 @@
-import React from "react";
-import "../style.css";
+import classes from "../style.module.css";
 
-const Stick = (props) => {
+type Props = {
+  axes: number[];
+};
+
+const Stick = (props: Props) => {
+  const { axes } = props;
+
   return (
-    <div className="Axis">
+    <div className={classes.axis}>
       <svg
         style={{
           display: "block",
@@ -43,14 +48,14 @@ const Stick = (props) => {
           <line
             x1="0"
             y1="0"
-            x2={props.axes[0] * 78.5}
-            y2={props.axes[1] * 78.5}
+            x2={axes[0] * 78.5}
+            y2={axes[1] * 78.5}
             stroke="#19334D"
             strokeWidth="1"
           ></line>
           <circle
-            cx={props.axes[0] * 78.5}
-            cy={props.axes[1] * 78.5}
+            cx={axes[0] * 78.5}
+            cy={axes[1] * 78.5}
             r="4"
             fill="#19334D"
           ></circle>

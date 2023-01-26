@@ -1,14 +1,19 @@
-import React from "react";
-import "../style.css";
+import classes from "../style.module.css";
 
-const Buttons = (props) => {
+type Props = {
+  buttons: readonly GamepadButton[];
+};
+
+const Buttons = (props: Props) => {
+  const { buttons } = props;
+
   return (
-    <div className="Buttons">
-      {props.gamepad.buttons.map((button, index) => {
+    <div className={classes.buttons}>
+      {buttons.map((button, index) => {
         return (
           <div
             key={index}
-            className="Button"
+            className={classes.button}
             style={{
               background: `rgb(${255 - button.value * 36},${
                 255 - button.value * 227
