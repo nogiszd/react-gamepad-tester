@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/react-gamepad-tester/static/css/main.09363fc2.css",
-    "main.js": "/react-gamepad-tester/static/js/main.cc5521a2.js",
+    "main.css": "/react-gamepad-tester/static/css/main.ad15bd6e.css",
+    "main.js": "/react-gamepad-tester/static/js/main.ab326c18.js",
     "index.html": "/react-gamepad-tester/index.html",
-    "main.09363fc2.css.map": "/react-gamepad-tester/static/css/main.09363fc2.css.map",
-    "main.cc5521a2.js.map": "/react-gamepad-tester/static/js/main.cc5521a2.js.map"
+    "main.ad15bd6e.css.map": "/react-gamepad-tester/static/css/main.ad15bd6e.css.map",
+    "main.ab326c18.js.map": "/react-gamepad-tester/static/js/main.ab326c18.js.map"
   },
   "entrypoints": [
-    "static/css/main.09363fc2.css",
-    "static/js/main.cc5521a2.js"
+    "static/css/main.ad15bd6e.css",
+    "static/js/main.ab326c18.js"
   ]
 }
