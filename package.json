@@ -9,7 +9,7 @@
     "react-device-detect": "^2.2.2",
     "react-dom": "^18.2.0",
     "react-scripts": "^5.0.0",
-    "react-ts-gamepads": "^1.0.3",
+    "react-ts-gamepads": "^1.0.5",
     "web-vitals": "^3.1.1"
   },
   "devDependencies": {

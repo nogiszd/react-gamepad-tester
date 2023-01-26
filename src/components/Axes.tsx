@@ -1,20 +1,26 @@
 import Stick from "./Stick";
-import "../style.css";
+import classes from "../style.module.css";
 import { axes } from "src/constants/axes";
 
-const Axes = (props: any) => {
+type Props = {
+  axesList: readonly number[];
+};
+
+const Axes = (props: Props) => {
+  const { axesList } = props;
+
   return (
     <div>
       <div>
-        {props.gamepad.axes.length === 4 && (
-          <div className="Axes__Container">
-            <Stick axes={[props.gamepad.axes[0], props.gamepad.axes[1]]} />
-            <Stick axes={[props.gamepad.axes[2], props.gamepad.axes[3]]} />
+        {axesList.length === 4 && (
+          <div className={classes["axes__container"]}>
+            <Stick axes={[axesList[0], axesList[1]]} />
+            <Stick axes={[axesList[2], axesList[3]]} />
           </div>
         )}
       </div>
-      <div className="Axes">
-        {props.gamepad.axes.map((stick: any, index: any) => {
+      <div className={classes.axes}>
+        {axesList.map((stick, index) => {
           return (
             <div key={index}>
               <span>{axes[index]}:</span> {stick.toFixed(4)}

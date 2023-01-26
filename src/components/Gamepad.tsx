@@ -1,29 +1,35 @@
 import Buttons from "./Buttons";
 import Axes from "./Axes";
 import VibrationActuators from "./VibrationActuators";
-import "../style.css";
+import classes from "../style.module.css";
 
-const Gamepad = (props: any) => {
+type Props = {
+  gamepad: Gamepad;
+};
+
+const Gamepad = (props: Props) => {
+  const { gamepad } = props;
+
   return (
-    <div className="Gamepad">
-      <div className="GamepadTitle">
+    <div className={classes.gamepad}>
+      <div className={classes.gamepadTitle}>
         <h2>
-          {props.gamepad.id}{" "}
-          <span className="GamepadTitle__subtitle">
-            (GPID {props.gamepad.index})
+          {gamepad.id}{" "}
+          <span className={classes["gamepadTitle__subtitle"]}>
+            (GPID {gamepad.index})
           </span>
         </h2>
       </div>
 
-      <Buttons gamepad={props.gamepad} />
+      <Buttons buttons={gamepad.buttons} />
 
-      <Axes gamepad={props.gamepad} />
+      <Axes axesList={gamepad.axes} />
 
-      <div className="Timestamp">
-        Timestamp: {props.gamepad.timestamp.toFixed(4)}
+      <div className={classes.timestamp}>
+        Timestamp: {gamepad.timestamp.toFixed(4)}
       </div>
 
-      <VibrationActuators gamepad={props.gamepad} />
+      <VibrationActuators gamepad={gamepad} />
     </div>
   );
 };

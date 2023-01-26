@@ -1,7 +1,13 @@
-import "../style.css";
+import classes from "../style.module.css";
 
-const VibrationActuators = (props: any) => {
-  const handleVibration = (gamepad: any) => {
+type Props = {
+  gamepad: Gamepad;
+};
+
+const VibrationActuators = (props: Props) => {
+  const { gamepad } = props;
+
+  const handleVibration = (gamepad: GamepadHapticActuator) => {
     gamepad.playEffect(gamepad.type, {
       startDelay: 0,
       duration: 1000,
@@ -10,10 +16,10 @@ const VibrationActuators = (props: any) => {
     });
   };
 
-  return (() => {
-    if (props.gamepad.vibrationActuator) {
-      return (
-        <div className="Vibration">
+  return (
+    <>
+      {gamepad.vibrationActuator ? (
+        <div className={classes.vibration}>
           <p>
             Vibration:{" "}
             <span style={{ color: "green", fontWeight: "bold" }}>
@@ -28,17 +34,16 @@ const VibrationActuators = (props: any) => {
             Vibrate
           </button>
         </div>
-      );
-    }
-    return (
-      <div className="Vibration">
-        <p>
-          Vibration:{" "}
-          <span style={{ color: "grey", fontWeight: "bold" }}>None</span>
-        </p>
-      </div>
-    );
-  })();
+      ) : (
+        <div className={classes.vibration}>
+          <p>
+            Vibration:{" "}
+            <span style={{ color: "grey", fontWeight: "bold" }}>None</span>
+          </p>
+        </div>
+      )}
+    </>
+  );
 };
 
 export default VibrationActuators;

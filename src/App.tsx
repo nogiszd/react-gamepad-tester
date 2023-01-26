@@ -1,12 +1,15 @@
 import { useEffect, useState } from "react";
-import { isMobile } from "react-device-detect";
+import { useIsMobile } from "./hooks/useIsMobile";
 import Gamepad from "./components/Gamepad";
 import { GamepadRef, useGamepads } from "react-ts-gamepads";
 import classes from "./style.module.css";
-import MobileMessage from "./components/MobileMessage";
+import MobileMessage from "./components/messages/MobileMessage";
+import EmptyMessage from "./components/messages/EmptyMessage";
 
-export default function App() {
+const App = () => {
   const [gamepads, setGamepads] = useState<GamepadRef>();
+  const isMobile = useIsMobile();
+
   useGamepads((_gamepads) => {
     setGamepads(_gamepads);
   });
@@ -17,5 +20,23 @@ export default function App() {
     });
   }, []);
 
-  return <div className="App">{isMobile ? <MobileMessage /> : <></>}</div>;
-}
+  return (
+    <div className={classes.app}>
+      {isMobile ? (
+        <MobileMessage />
+      ) : (
+        <>
+          {gamepads && Object.keys(gamepads).length > 0 ? (
+            Object.keys(gamepads).map((id, index) => (
+              <Gamepad gamepad={gamepads[Number(id)]} key={index} />
+            ))
+          ) : (
+            <EmptyMessage />
+          )}
+        </>
+      )}
+    </div>
+  );
+};
+
+export default App;
