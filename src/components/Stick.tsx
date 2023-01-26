@@ -1,7 +1,6 @@
-import React from "react";
 import "../style.css";
 
-const Stick = (props) => {
+const Stick = (props: any) => {
   return (
     <div className="Axis">
       <svg

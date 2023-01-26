@@ -1,10 +1,9 @@
-import React from "react";
 import "../style.css";
 
-const Buttons = (props) => {
+const Buttons = (props: any) => {
   return (
     <div className="Buttons">
-      {props.gamepad.buttons.map((button, index) => {
+      {props.gamepad.buttons.map((button: any, index: any) => {
         return (
           <div
             key={index}

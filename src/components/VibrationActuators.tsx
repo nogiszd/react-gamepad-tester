@@ -1,8 +1,7 @@
-import React from "react";
 import "../style.css";
 
-const VibrationActuators = (props) => {
-  const handleVibration = (gamepad) => {
+const VibrationActuators = (props: any) => {
+  const handleVibration = (gamepad: any) => {
     gamepad.playEffect(gamepad.type, {
       startDelay: 0,
       duration: 1000,

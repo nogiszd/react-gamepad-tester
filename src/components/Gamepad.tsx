@@ -1,10 +1,9 @@
-import React from "react";
 import Buttons from "./Buttons";
 import Axes from "./Axes";
 import VibrationActuators from "./VibrationActuators";
 import "../style.css";
 
-const Gamepad = (props) => {
+const Gamepad = (props: any) => {
   return (
     <div className="Gamepad">
       <div className="GamepadTitle">

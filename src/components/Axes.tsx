@@ -1,10 +1,8 @@
-import React from "react";
 import Stick from "./Stick";
 import "../style.css";
+import { axes } from "src/constants/axes";
 
-const Axes = (props) => {
-  const axes = ["Axis 0", "Axis 1", "Axis 2", "Axis 3"];
-
+const Axes = (props: any) => {
   return (
     <div>
       <div>
@@ -16,7 +14,7 @@ const Axes = (props) => {
         )}
       </div>
       <div className="Axes">
-        {props.gamepad.axes.map((stick, index) => {
+        {props.gamepad.axes.map((stick: any, index: any) => {
           return (
             <div key={index}>
               <span>{axes[index]}:</span> {stick.toFixed(4)}
